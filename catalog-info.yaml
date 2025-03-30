@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: jao080lqy-python-gitops
+  description: This is GitOps manifest for jao080lqy-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=jao080lqy-python
+    backstage.io/kubernetes-id: jao080lqy-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: jao080lqy-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:jao080lqy-python

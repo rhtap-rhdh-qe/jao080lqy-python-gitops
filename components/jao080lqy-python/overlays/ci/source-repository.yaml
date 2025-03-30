@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: jao080lqy-python-repository
+spec:
+  url: https://github.com/rhtap-rhdh-qe/jao080lqy-python
